@@ -25,16 +25,14 @@ section {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.lastSection {
-    margin-bottom: 80px;
-}
+
 
 footer {
     text-align: center;
     padding: 10px;
     background-color: #333;
     color: #fff;
-    position: fixed;
+    position: sticky;
     width: 100%;
     bottom: 0;
 }
