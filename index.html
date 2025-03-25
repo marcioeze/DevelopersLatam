@@ -3,8 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Política de Privacidad - Mi App de Instagram</title>
+    <title>Política de Privacidad - Developers LATAM</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        @keyframes fadeToOriginal {
+            0% {
+                background-color: yellow; 
+            }
+            100% {
+                background-color: transparent;
+            }
+        }
+
+        #eliminaciondedatos {
+            transition: background-color 3s ease-out;
+        }
+
+        .highlight {
+            animation: fadeToOriginal 3s ease-out;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -13,7 +31,6 @@
 
     <main>
 
-        
         <section>
             <h2>Objetivo de la Aplicación</h2>
             <p>
@@ -29,47 +46,63 @@
                 Solo accedemos a los posts públicos de la cuenta de Instagram. No almacenamos ningún dato personal ni privado más allá de las publicaciones mostradas en nuestra aplicación. 
                 Nuestro sistema utiliza la API de Instagram de forma que los datos solo son accesibles a través de la autorización previa de la cuenta que consulta la información.
             </p>
-    </section>
+        </section>
 
-    <section>
-        <h2>Proceso de Verificación de la App</h2>
-        <p>
-            La app está en proceso de verificación con Meta (Facebook). Una vez verificada, nuestra aplicación tendrá acceso avanzado, lo que significa que podremos obtener los datos de múltiples cuentas de Instagram de forma más flexible, siempre respetando los permisos y privacidad de los usuarios.
-        </p>
-    </section>
-    
-    <section>
-        <h2>Cómo Usaremos los Permisos</h2>
-        <p>
-            Solicitamos acceso avanzado a los datos para poder mostrar publicaciones de cuentas de Instagram sin necesidad de que el usuario tenga que iniciar sesión cada vez. La verificación de nuestra app garantizará que solo manejemos los datos con el máximo nivel de seguridad.
-        </p>
-    </section>
-    
-    <section class="lastSection">
-        <h2>Ver el Flujo de Autorización</h2>
-        <p>
-            Para entender cómo funciona el proceso de autorización y acceso a tus publicaciones de Instagram, puedes ver el flujo detallado haciendo clic en el siguiente botón:
-        </p>
-        <a href="flujo.html" class="btn-flujo">Ver Flujo de Autorización</a>
-    </section>
-    
-    <section>
-        <h2>Solicitud de Eliminación de Datos</h2>
-        <p>
-            Entendemos la importancia de la privacidad y la seguridad de tus datos. Si en cualquier momento deseas eliminar los datos que hemos almacenado o procesado a través de nuestra aplicación, puedes hacerlo fácilmente poniéndote en contacto con nosotros de las siguientes maneras:
-        </p>
-        <ul>
-            <li>Enviando un correo electrónico a <a href="mailto:veramarcio81@gmail.com">veramarcio81@gmail.com</a> solicitando la eliminación de tus datos.</li>
-            <li>Utilizando el formulario de eliminación de datos disponible en nuestra página web (si corresponde).</li>
-        </ul>
-        <p>
-            Una vez recibida la solicitud de eliminación, procesaremos tu petición en un plazo razonable y te notificaremos cuando tus datos hayan sido eliminados de nuestros sistemas.
-        </p>
-    </section>
-</main>
+        <section>
+            <h2>Proceso de Verificación de la App</h2>
+            <p>
+                La app está en proceso de verificación con Meta (Facebook). Una vez verificada, nuestra aplicación tendrá acceso avanzado, lo que significa que podremos obtener los datos de múltiples cuentas de Instagram de forma más flexible, siempre respetando los permisos y privacidad de los usuarios.
+            </p>
+        </section>
+        
+        <section>
+            <h2>Cómo Usaremos los Permisos</h2>
+            <p>
+                Solicitamos acceso avanzado a los datos para poder mostrar publicaciones de cuentas de Instagram sin necesidad de que el usuario tenga que iniciar sesión cada vez. La verificación de nuestra app garantizará que solo manejemos los datos con el máximo nivel de seguridad.
+            </p>
+        </section>
+        
+        <section class="lastSection">
+            <h2>Ver el Flujo de Autorización</h2>
+            <p>
+                Para entender cómo funciona el proceso de autorización y acceso a tus publicaciones de Instagram, puedes ver el flujo detallado haciendo clic en el siguiente botón:
+            </p>
+            <a href="flujo.html" class="btn-flujo">Ver Flujo de Autorización</a>
+        </section>
+        
+        <section id="eliminaciondedatos">
+            <h2>Solicitud de Eliminación de Datos</h2>
+            <p>
+                Entendemos la importancia de la privacidad y la seguridad de tus datos. Si en cualquier momento deseas eliminar los datos que hemos almacenado o procesado a través de nuestra aplicación, puedes hacerlo fácilmente poniéndote en contacto con nosotros de las siguientes maneras:
+            </p>
+            <ul>
+                <li>Enviando un correo electrónico a <a href="mailto:veramarcio81@gmail.com">veramarcio81@gmail.com</a> solicitando la eliminación de tus datos.</li>
+                <li>Utilizando el formulario de eliminación de datos disponible en nuestra página web (si corresponde).</li>
+            </ul>
+            <p>
+                Una vez recibida la solicitud de eliminación, procesaremos tu petición en un plazo razonable y te notificaremos cuando tus datos hayan sido eliminados de nuestros sistemas.
+            </p>
+        </section>
+    </main>
     
     <footer>
         <p>&copy; 2025 Developers LATAM</p>
     </footer>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            if (window.location.hash === '#eliminaciondedatos') {
+                const section = document.querySelector('#eliminaciondedatos');
+                
+                if (section) {
+                    section.classList.add('highlight');
+                    
+                    setTimeout(() => {
+                        section.classList.remove('highlight');
+                    }, 3000);
+                }
+            }
+        });
+    </script>
 </body>
 </html>
