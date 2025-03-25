@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flujo de la App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Flujo de la App</h1>
+    </header>
+
+    <section>
+        <h2>1. Conexión a la Cuenta de Instagram (OAuth)</h2>
+        <p>
+            El usuario se conecta a su cuenta de Instagram mediante el flujo de autenticación de Instagram (OAuth). Al autorizar la aplicación, la app podrá acceder a los datos de la cuenta del usuario, incluyendo sus publicaciones.
+            <br><br>
+            Aunque nuestra app esté verificada, cada usuario deberá pasar por este proceso de autorización para permitir el acceso a sus datos de Instagram.
+        </p>
+    </section>
+
+    <section>
+        <h2>2. Verificación de la Aplicación</h2>
+        <p>
+            La aplicación está en proceso de verificación con Meta (Facebook). Esto nos permitirá obtener permisos avanzados, como el acceso a cuentas de Instagram adicionales (siempre con autorización de los usuarios) y más flexibilidad en cuanto a la cantidad de datos que podemos obtener de Instagram.
+            <br><br>
+            Sin embargo, el proceso de autorización (OAuth) seguirá siendo el mismo, donde los usuarios deben autorizar explícitamente el acceso a sus datos.
+        </p>
+    </section>
+
+    <section>
+        <h2>3. Acceso a los Datos de Instagram</h2>
+        <p>
+            Después de la autorización mediante OAuth, podremos acceder a los datos de Instagram del usuario. Con la verificación de la app, no solo obtendremos los posts de la cuenta conectada, sino que también podremos interactuar con más cuentas (siempre con el permiso adecuado).
+            <br><br>
+            Todos los datos serán tratados con la máxima seguridad y solo se utilizarán para mostrar las publicaciones del usuario, tal como se explicó en <a href="/index.html">nuestra política de privacidad</a>.
+        </p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Developers LATAM</p>
+    </footer>
+</body>
+</html>
